@@ -8,7 +8,7 @@ ALLOWED_HOSTS= [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 CSRF_TRUSTED_ORIGINS =['https://'+os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 SECRET_KEY = os.environ.get('SECRET_KEY')
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware"
+    "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -23,6 +23,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     # "http://localhost:3000",  
     # "http://127.0.0.1:3000",
+    "https://gray-river-03c16a403.4.azurestaticapps.net"
 ]
 
 STORAGES = {

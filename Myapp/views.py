@@ -13,7 +13,7 @@ from rest_framework.decorators import api_view
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Customer
 
-
+    
 @api_view(['POST'])
 def login_view(request):
     username = request.data.get('username')  # Admin username or Customer phone

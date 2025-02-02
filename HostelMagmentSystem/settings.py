@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Allow the React frontend
+    "https://gray-river-03c16a403.4.azurestaticapps.net",  # Allow the React frontend
 ]
 
 
