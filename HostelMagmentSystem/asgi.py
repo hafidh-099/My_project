@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HostelMagmentSystem.settings')
-
+setting_module= 'HostelMagmentSystem.deployment' if 'RENDER_EXTERNAL_HOSTNAME' in os.environ else 'HostelMagmentSystem.settings'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', setting_module)
 application = get_asgi_application()
